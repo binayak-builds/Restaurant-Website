@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #070b11;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  position: fixed;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #00b894;
+}
+
+.logo span {
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #dcdcdc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00b894;
+}
+
+.btn {
+  background: linear-gradient(135deg, #00b894, #0984e3);
+  padding: 10px 25px;
+  border-radius: 25px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00b894aa;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background: url('https://source.unsplash.com/1600x900/?cafe,coffee,restaurant') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-text {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #00b894;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+/* Section Titles */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #00b894;
+  margin-bottom: 20px;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #00b894;
+  margin: 10px auto;
+  border-radius: 3px;
+}
+
+/* Menu Grid */
+.menu-grid, .order-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  width: 85%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.menu-card, .food-card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.4s;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.menu-card:hover, .food-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.menu-card img, .food-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.menu-info, .food-card h3 {
+  padding: 15px;
+}
+
+/* Map + Contact */
+.map-container {
+  width: 85%;
+  margin: auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 500px;
+  margin: 30px auto;
+}
+
+form input, form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  outline: none;
+}
+
+footer {
+  text-align: center;
+  background: rgba(0,0,0,0.8);
+  padding: 15px;
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* ORDER PAGE SPECIFIC */
+.order-header {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #00b894, #0984e3);
+}
+
+.order-header h1 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.back-btn {
+  margin-top: 15px;
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
+}
+
+/* Floating Cart */
+#cart-icon {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #00b894, #0984e3);
+  padding: 12px 20px;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+#cart-icon span {
+  background: white;
+  color: #00b894;
+  border-radius: 50%;
+  padding: 3px 7px;
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+
+/* Cart Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  color: #fff;
+  text-align: center;
+}
+
+#close-cart {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #00b894;
+}
+
+#cart-items {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+#cart-items li {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.total {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #00b894;
+}
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: all 0.8s ease-in-out;
+}

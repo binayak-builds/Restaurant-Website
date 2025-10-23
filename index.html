@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TasteBite Café</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header id="header">
+    <div class="container">
+      <h1 class="logo">TasteBite <span>Café</span></h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="order.html" class="btn order-btn">Order Now</a>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <h2>Where Every Sip Tells a Story ☕</h2>
+      <p>Relax. Unwind. Taste the magic of coffee & comfort food.</p>
+      <a href="#menu" class="btn explore-btn">Explore Menu</a>
+    </div>
+  </section>
+
+  <section id="menu">
+    <h2 class="section-title">Our Signature Menu</h2>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <img src="https://source.unsplash.com/400x300/?espresso" alt="Espresso">
+        <div class="menu-info">
+          <h3>Espresso</h3>
+          <p>Strong, bold & aromatic.</p>
+          <span>₹120</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="https://source.unsplash.com/400x300/?pasta" alt="Pasta">
+        <div class="menu-info">
+          <h3>Alfredo Pasta</h3>
+          <p>Creamy sauce with parmesan.</p>
+          <span>₹250</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="https://source.unsplash.com/400x300/?sandwich" alt="Sandwich">
+        <div class="menu-info">
+          <h3>Grilled Sandwich</h3>
+          <p>Fresh veggies with melting cheese.</p>
+          <span>₹180</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="https://source.unsplash.com/400x300/?cake" alt="Cake">
+        <div class="menu-info">
+          <h3>Chocolate Lava Cake</h3>
+          <p>Rich molten delight.</p>
+          <span>₹220</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="location">
+    <h2 class="section-title">Find Us</h2>
+    <p>123 Café Street, Bengaluru, India</p>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.469011057155!2d77.5946!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzE3LjciTiA3N8KwMzUnMzkuOCJF!5e0!3m2!1sen!2sin!4v1619184379082"
+        width="100%" height="350" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 TasteBite Café | Crafted with ❤️ by Binayak</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Now | TasteBite Café</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="order-page">
+  <header class="order-header">
+    <h1>TasteBite <span>Café</span> — Order Now</h1>
+    <a href="index.html" class="btn back-btn">← Back to Home</a>
+  </header>
+
+  <section class="order-section">
+    <div class="order-grid">
+      <div class="food-card">
+        <img src="https://source.unsplash.com/400x300/?espresso" alt="Espresso">
+        <h3>Espresso</h3>
+        <p>Bold and intense espresso shot.</p>
+        <span class="price">₹120</span>
+        <button class="btn add-btn" data-name="Espresso" data-price="120">Add</button>
+      </div>
+      <div class="food-card">
+        <img src="https://source.unsplash.com/400x300/?pasta" alt="Pasta">
+        <h3>Alfredo Pasta</h3>
+        <p>Creamy sauce with parmesan cheese.</p>
+        <span class="price">₹250</span>
+        <button class="btn add-btn" data-name="Alfredo Pasta" data-price="250">Add</button>
+      </div>
+      <div class="food-card">
+        <img src="https://source.unsplash.com/400x300/?sandwich" alt="Sandwich">
+        <h3>Grilled Sandwich</h3>
+        <p>Stuffed with veggies and cheese.</p>
+        <span class="price">₹180</span>
+        <button class="btn add-btn" data-name="Grilled Sandwich" data-price="180">Add</button>
+      </div>
+      <div class="food-card">
+        <img src="https://source.unsplash.com/400x300/?cake" alt="Cake">
+        <h3>Chocolate Lava Cake</h3>
+        <p>Rich molten delight.</p>
+        <span class="price">₹220</span>
+        <button class="btn add-btn" data-name="Chocolate Lava Cake" data-price="220">Add</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="cart-icon">🛒 <span id="cart-count">0</span></div>
+
+  <div id="cart-modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="close-cart">&times;</span>
+      <h2>Your Order</h2>
+      <ul id="cart-items"></ul>
+      <p class="total">Total: ₹<span id="cart-total">0</span></p>
+      <button id="place-order" class="btn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 TasteBite Café | Crafted with ❤️ by Binayak</p>
+  </footer>
+
+  <script src="order.js"></script>
+</body>
+</html>

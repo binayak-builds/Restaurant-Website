@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout | TasteBite Café</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="checkout-page">
+
+  <header class="order-header">
+    <h1>Checkout — TasteBite <span>Café</span></h1>
+    <a href="order.html" class="btn back-btn">← Back to Menu</a>
+  </header>
+
+  <section class="checkout-section">
+    <h2 class="section-title">Customer Details</h2>
+    <form id="checkout-form">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="text" placeholder="Delivery Address" required>
+      <select required>
+        <option value="">Select Payment Method</option>
+        <option>Cash on Delivery</option>
+        <option>Card</option>
+        <option>UPI</option>
+      </select>
+      <button type="submit" class="btn">Confirm Order</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 TasteBite Café | Crafted with ❤️ by Binayak</p>
+  </footer>
+
+  <script>
+    document.getElementById("checkout-form").addEventListener("submit", e => {
+      e.preventDefault();
+      alert("Order confirmed! Redirecting...");
+      window.location.href = "thankyou.html";
+    });
+  </script>
+</body>
+</html>
